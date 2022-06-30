@@ -49,10 +49,15 @@ pub unsafe extern "C" fn napi_register_module_v1(
     let mut local: napi_value = std::mem::zeroed();
     napi_create_function(
         env,
+        //pointer to function name
         p.as_ptr(),
-        5,
+        //length of function anme
+        std::stringify!(printme).len(),
+        //Rust function
         Some(printme),
+        //context accessed by rust function
         std::ptr::null_mut(),
+        //output napi value
         &mut local,
     );
     napi_set_named_property(env, exports, p.as_ptr(), local);
