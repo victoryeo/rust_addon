@@ -1,7 +1,7 @@
 This project is about using Rust with NodeJS. 
-We use NodeJS Node-API(N-API) to build native addon. We implement the native addon using Rust.
+1. We use NodeJS Node-API(N-API) to build native addon. We implement the native addon using Rust.
 
-We use NodeJS FFI(Foreign function interface) to build ffi addon. We implement the ffi addon using Rust. (it seems FFI is obsolete)
+2. We use NodeJS FFI(Foreign function interface) to build ffi addon. We implement the ffi addon using Rust. (It seems FFI is obsolete)
 
 The steps to create, build, execute the project:
 - For native project:
